@@ -12,6 +12,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+   
+    background-image: url('../img/fondo.jpg'); /* Cambia ruta e imagen */
+    background-size: cover;         /* Para que cubra toda la pantalla */
+    background-repeat: no-repeat;   /* Para que no se repita */
+    background-attachment: fixed;   /* Para que no se mueva al hacer scroll */
+    background-position: center;    /* Centra la imagen */
+
+
 }
 
 /**** Header *****/
