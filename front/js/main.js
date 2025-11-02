@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Bloquear enlaces protegidos si no hay sesión
-        if (!token) {
+        /*if (!token) {
             document.querySelectorAll('.protegido').forEach((link) => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     window.location.href = "login.html";
                 });
             });
-        }
+        }*/
     }
 });
