@@ -12,34 +12,31 @@ loginForm.addEventListener('submit', async (e) => {
     try {
         const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ user, password })
         });
 
         const data = await response.json();
 
         if (response.ok) {
-            //Guardar token y usuario en localStorage
+            //Guardar sesion
             localStorage.setItem('token', data.token);
-            localStorage.setItem('usuario', data.nombreCompleto);
+            localStorage.setItem('usuario', data.nombreCompleto); 
 
-            //Mostrar mensaje
-            message.textContent = "Acceso permitido, redirigiendo..";
+            message.textContent = "Acceso permitido, redirigiendo...";
             message.style.color = "green";
 
-            //Redirigir al inicio
             setTimeout(() => {
                 window.location.href = "index.html";
             }, 1500);
         } else {
-            message.textContent = "Credenciales incorrectas.";
+            message.textContent = "Usuario o contraseña incorrectos.";
             message.style.color = "red";
         }
+
     } catch (error) {
         console.error(error);
-        message.textContent = "Error en el servidor.";
+        message.textContent = "Error al conectar con el servidor.";
         message.style.color = "red";
     }
 });
