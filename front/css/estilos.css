@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Marcellus&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Purple+Purse&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Story+Script&family=TASA+Explorer:wght@400..800&display=swap');
+
 /***** Reset *****/
 * {
     margin: 0;
@@ -5,8 +7,12 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Old Standard TT", serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background-color: #f7f7f7;
     color: #f3e8e8;
     min-height: 100vh;
@@ -57,7 +63,7 @@ header nav ul li a:hover {
 .contenido {
     text-align: center; 
     margin-top: 100px;
-    color: #700202;
+    color: #ffffff;
 }
 
 .contenido h1 {
@@ -67,7 +73,7 @@ header nav ul li a:hover {
 
 .contenido p {
     font-size: 1.2rem;
-    color: #f5efef;
+    color: #4f0909;
 }
 
     /*certificaciones*/
@@ -256,3 +262,58 @@ footer {
     margin-top: 10px;
     font-size: 0.9rem;
 }
+
+/**** Contacto *****/
+.contacto-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.contacto-content {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-contacto {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-contacto button {
+    padding: 10px;
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.form-contacto button:hover {
+    background-color: #295b9a;
+}
+
+.info-contacto {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    background: #c0ceb9;
+    padding: 20px;
+    border-radius: 10px;
+    color: #1a1a1a;
+}
+
