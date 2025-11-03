@@ -8,10 +8,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
-    color: #333;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+   
+    background-image: url('../img/fondo.jpg'); 
+    background-size: cover;         
+    background-repeat: no-repeat;   
+    background-attachment: fixed; /* Para que no se mueva al hacer scroll */
+    background-position: center;    
+
+
 }
 
 /**** Header *****/
@@ -19,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
+    background-image: url('../img/fondo2.jpg');
     color: white;
     padding: 10px 40px;
 }
@@ -49,6 +57,7 @@ header nav ul li a:hover {
 .contenido {
     text-align: center; 
     margin-top: 100px;
+    color: #700202;
 }
 
 .contenido h1 {
@@ -58,7 +67,7 @@ header nav ul li a:hover {
 
 .contenido p {
     font-size: 1.2rem;
-    color: #555;
+    color: #f5efef;
 }
 
     /*certificaciones*/
@@ -162,7 +171,7 @@ footer {
     margin-top: auto; 
     text-align: center;
     padding: 15px;
-    background-color: #222;
+    background-image: url('../img/fondo2.jpg');
     color: white;
     font-size: 0.9rem;
 }
