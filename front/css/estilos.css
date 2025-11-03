@@ -61,6 +61,102 @@ header nav ul li a:hover {
     color: #555;
 }
 
+    /*certificaciones*/
+
+.principal-image img {
+  width: 100%;               /* ocupa todo el ancho del contenedor */
+  max-width: 1000px;         /* límite para pantallas grandes */
+  height: auto;              /* mantiene proporción original */
+  display: block;
+  margin: 40px auto;         /* centrado con espacio arriba/abajo */
+  border-radius: 16px;       /* bordes suaves */
+  box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2); /* sombra sutil azul */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.principal-image img:hover {
+  transform: scale(1.03);    /* zoom suave al pasar el mouse */
+  box-shadow: 0 15px 40px rgba(0, 191, 255, 0.4); /* sombra más intensa */
+}
+
+
+
+.certificaciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px;
+}
+
+.certificacion-bloque,
+.certificacion-inverso {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.certificacion-bloque:hover,
+.certificacion-inverso:hover {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+
+.certificacion-bloque {
+  flex-direction: row;
+}
+
+.certificacion-inverso {
+  flex-direction: row-reverse;
+}
+
+.certificacion-bloque img,
+.certificacion-inverso img {
+  width: 40%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+.texto {
+  width: 55%;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.texto h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #00bfff;
+}
+
+.texto p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+  .certificacion-bloque,
+  .certificacion-inverso {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .certificacion-bloque img,
+  .certificacion-inverso img,
+  .texto {
+    width: 100%;
+  }
+}
+
+
+
 /**** Footer *****/
 footer {
     margin-top: auto; 
