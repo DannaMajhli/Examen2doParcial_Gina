@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
    
-    background-image: url('../img/fondo.jpg'); 
+    background-image: url('/img/fondo.jpg');
     background-size: cover;         
     background-repeat: no-repeat;   
     background-attachment: fixed; /* Para que no se mueva al hacer scroll */
@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../img/fondo2.jpg');
+    background-image: url('/img/fondo2.jpg');
     color: white;
     padding: 10px 40px;
 }
