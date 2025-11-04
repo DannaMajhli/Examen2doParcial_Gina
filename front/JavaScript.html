@@ -87,9 +87,23 @@
 </div>
 
 <div style="display: flex; justify-content: center;" class="botones-certificacion">
-  <a href="java-certificacion.html" class="boton-primario">Pagar certificacion</a>
+  <a href="#" class="boton-primario" onclick="simularPago()">Pagar certificacion</a>
   <a href="inscripcion.html" class="boton-secundario">Iniciar examen</a>
 </div>
+
+<script>
+  let pagoRealizado = false; // Bandera para controlar el estado del pago
+
+  function simularPago() {
+    if (pagoRealizado) {
+      alert("⚠️ Ya has realizado el pago. No puedes pagar dos veces.");
+    } else {
+      alert("✅ Pago realizado con éxito. ¡Gracias por tu inscripción!");
+      pagoRealizado = true;
+    }
+  }
+</script>
+
 
     
 </body>
