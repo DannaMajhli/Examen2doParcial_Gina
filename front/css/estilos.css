@@ -22,11 +22,63 @@ body {
     background-image: url('../img/fondo.jpg');
     background-size: cover;         
     background-repeat: no-repeat;   
-    background-attachment: fixed; /* Para que no se mueva al hacer scroll */
+    background-attachment: fixed; 
     background-position: center;    
-
+    scroll-behavior: smooth;
 
 }
+
+/******* Pagina Principal ********/
+
+.hero {
+    padding: 100px 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Botón principal */
+.btn-principal {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #00bfff;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: #009acd;
+}
+
+section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
 
 /************** Header *************/
 header {
@@ -35,7 +87,7 @@ header {
     align-items: center;
     background-image: url('../img/fondo2.jpg');
     color: white;
-    padding: 10px 40px;
+    padding: 15px 48px;
 }
 
 header .logo {
@@ -69,11 +121,12 @@ header nav ul li a:hover {
 .contenido h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contenido p {
     font-size: 1.2rem;
-    color: #ffdeca;
+    color: #000000;
 }
 
 
