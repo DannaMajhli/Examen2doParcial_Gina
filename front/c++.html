@@ -34,8 +34,25 @@
 
         </div>
 
-
-
+    <!-- Aviso emergente -->
+  <div id="popup-overlay">
+    <div id="popup-box">
+      <h2>📢 Aviso Importante</h2>
+      <p>
+        Estamos preparando el lanzamiento oficial de la certificación en C++ Developer, 
+        disponible hasta abril de 2026. Si sueñas con crear software de alto rendimiento,
+         este curso te dará las herramientas para lograrlo. 
+      </p>
+      <button onclick="cerrarPopup()">Entendido</button>
+    </div>
+  </div>
+ <!-- Script para cerrar el aviso -->
+  <script>
+    function cerrarPopup() {
+      document.getElementById("popup-overlay").style.display = "none";
+    }
+  </script>
+  
     </section>
 
     <div class="cuadro-beneficios">
@@ -83,8 +100,8 @@
 </div>
 
 <div style="display: flex; justify-content: center;" class="botones-certificacion">
-  <a href="java-certificacion.html" class="boton-primario">Pagar certificacion</a>
-  <a href="inscripcion.html" class="boton-secundario">Iniciar examen</a>
+  <a href="#" class="boton-primario">Pagar certificacion</a>
+  <a href="#" class="boton-secundario">Iniciar examen</a>
 </div>
 
     

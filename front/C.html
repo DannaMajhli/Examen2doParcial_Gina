@@ -34,7 +34,22 @@
 
         </div>
 
-
+   <!-- Aviso emergente -->
+  <div id="popup-overlay">
+    <div id="popup-box">
+      <h2>📢 Aviso Importante</h2>
+      <p>
+        La certificación en C# Developer estará activa hasta septiembre de 2026. Aprende a construir aplicaciones modernas con .NET y destaca en el mundo profesional. Cupos limitados. ¡Aprovecha antes de que cierre el periodo! 
+      </p>
+      <button onclick="cerrarPopup()">Entendido</button>
+    </div>
+  </div>
+ <!-- Script para cerrar el aviso -->
+  <script>
+    function cerrarPopup() {
+      document.getElementById("popup-overlay").style.display = "none";
+    }
+  </script>
 
     </section>
 
@@ -83,8 +98,8 @@
 </div>
 
 <div style="display: flex; justify-content: center;" class="botones-certificacion">
-  <a href="java-certificacion.html" class="boton-primario">Pagar certificacion</a>
-  <a href="inscripcion.html" class="boton-secundario">Iniciar examen</a>
+  <a href="#" class="boton-primario">Pagar certificacion</a>
+  <a href="#" class="boton-secundario">Iniciar examen</a>
 </div>
 
     

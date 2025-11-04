@@ -22,6 +22,23 @@
         </nav>
     </header> 
 
+      <!-- Aviso emergente -->
+  <div id="popup-overlay">
+    <div id="popup-box">
+      <h2>📢 Aviso Importante</h2>
+      <p>Estamos desarrollando la certificación oficial de Java Developer, diseñada para ofrecerte una formación completa y actualizada. Esta certificación estará disponible hasta diciembre de 2025.
+      </p>
+      <button onclick="cerrarPopup()">Entendido</button>
+    </div>
+  </div>
+
+  <!-- Script para cerrar el aviso -->
+  <script>
+    function cerrarPopup() {
+      document.getElementById("popup-overlay").style.display = "none";
+    }
+  </script>
+
     <section class="descripcion-section">
         <div class="descripcion-container">
             <div class="descripcion-bloque">
@@ -94,9 +111,10 @@
 </div>
 
 <div style="display: flex; justify-content: center;" class="botones-certificacion">
-  <a href="java-certificacion.html" class="boton-primario">Pagar certificacion</a>
-  <a href="inscripcion.html" class="boton-secundario">Iniciar examen</a>
+  <a href="#" class="boton-primario">Pagar certificación</a>
+  <a href="#" class="boton-secundario">Iniciar examen</a>
 </div>
+
 
     
 </body>

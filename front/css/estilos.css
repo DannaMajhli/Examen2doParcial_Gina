@@ -191,6 +191,54 @@ header nav ul li a:hover {
 
 /*cada certificadu*/
 
+/* Fondo semitransparente */
+#popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caja del aviso */
+#popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#popup-box h2 {
+  margin-top: 0;
+  color: #24d7ff;
+}
+
+#popup-box p {
+  font-size: 16px;
+  color: #333;
+}
+
+#popup-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #39cafa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup-box button:hover {
+  background-color: #1a20bf;
+}
+
+
+
 .descripcion-container {
   display: flex;
   flex-direction: column;
