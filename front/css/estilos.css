@@ -452,25 +452,27 @@ header nav ul li a:hover {
 
 /* Botón azul brillante */
 .boton-primario {
-  background-color: #00bfff;
+  background-color: transparent;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+  border: 2px solid #00bfff;
 }
 
 .boton-primario:hover {
-  background-color: #009acd;
+  background-color: #111112;
   transform: translateY(-2px);
+  color: #fff;
+  border-color: #00eaff;
 }
 
 /* Botón oscuro con borde */
-.boton-secundario {
+.boton-secundario{
   background-color: transparent;
-  color: #00bfff;
+  color: #b2e9fb;
   border: 2px solid #00bfff;
 }
 
 .boton-secundario:hover {
-  background-color: #1a1a1a;
+  background-color: #171717;
   color: #fff;
   border-color: #00eaff;
   transform: translateY(-2px);
