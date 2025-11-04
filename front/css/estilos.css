@@ -664,3 +664,57 @@ footer {
     color: #3d3d3d;
 }
 
+/*************** Sección Instructores ***************/
+.instructores {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px 20px;
+}
+
+.instructores h2 {
+    font-family: "Old Standard TT", serif;
+    font-size: 2rem;
+    color: #df6954;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.instructores-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.instructor-card {
+    background: rgb(40, 39, 39);
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.instructor-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #df6954;
+}
+
+.instructor-card h3 {
+    font-family: "Old Standard TT", serif;
+    font-size: 1.2rem;
+    color: #df6954;
+    margin-bottom: 10px;
+}
+
+.instructor-card p {
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+
