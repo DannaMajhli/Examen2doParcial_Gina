@@ -1,6 +1,6 @@
 import express from 'express';
 import { authRequired } from '../middleware/authRequired.js';
-import { startQuiz, submitAnswers, estadoIntento } from '../controllers/questionsController.js';
+import { startQuiz, submitAnswers, estadoIntento } from '../controllers/examController.js';
 
 const router = express.Router();
 
