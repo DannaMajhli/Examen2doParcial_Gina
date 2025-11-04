@@ -92,17 +92,26 @@
 </div>
 
 <script>
-  let pagoRealizado = false; // Bandera para controlar el estado del pago
-
+  // Función que simula el proceso de pago
   function simularPago() {
-    if (pagoRealizado) {
+    
+    // Verificamos si ya existe un registro en localStorage que indique que el usuario ya pagó
+    if (localStorage.getItem("pagoRealizado") === "true") {
+      
+      // Si el usuario ya pagó, mostramos una alerta y no permitimos pagar de nuevo
       alert("⚠️ Ya has realizado el pago. No puedes pagar dos veces.");
+    
     } else {
+      
+      // Si el usuario no ha pagado, mostramos mensaje de éxito
       alert("✅ Pago realizado con éxito. ¡Gracias por tu inscripción!");
-      pagoRealizado = true;
+      
+      // Guardamos el estado de pago en localStorage para que se recuerde incluso si se recarga la página
+      localStorage.setItem("pagoRealizado", "true");
     }
   }
 </script>
+
 
 
     
