@@ -491,7 +491,25 @@ footer {
     background-image: url('../img/fondo2.jpg');
     color: white;
     font-size: 0.9rem;
+
 }
+
+.footer p{
+ color: #000000;
+}
+
+.footer .social-icon img {
+    width: 22px; /* Más pequeño */
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1); /* Para que se vea blanco si es negro */
+}
+
+.footer .social-icon img:hover {
+    transform: scale(1.2);
+}
+
 
 
 /************ Login Formulario *************/
