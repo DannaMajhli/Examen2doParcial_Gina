@@ -123,6 +123,7 @@ header nav ul li a:hover {
 }
 
 .contenido h1 {
+    margin-top: 0;
     font-size: 2.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -477,10 +478,6 @@ header nav ul li a:hover {
   border-color: #00eaff;
   transform: translateY(-2px);
 }
-
-
-
-
 
 
 /*************** Footer ***************/
