@@ -5,7 +5,13 @@ import examRoutes from './routes/exam.Routes.js';
 
 const app = express();
 
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5500", // el dominio desde donde cargas tu front
+    credentials: true, // permite cookies y autenticación
+  })
+);
 app.use(express.json());
 
 // Rutas
