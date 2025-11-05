@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import loginRoutes from './routes/loginRoutes.js';
-import examRoutes from './routes/examRoutes.js';
+import examRoutes from './routes/exam.Routes.js';
 
 const app = express();
 
