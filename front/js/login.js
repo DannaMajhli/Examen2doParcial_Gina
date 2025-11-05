@@ -23,7 +23,7 @@ loginForm.addEventListener('submit', async (e) => {
         if (response.ok) {
             //Guardar sesion
             localStorage.setItem('token', data.token);
-            localStorage.setItem('usuario', data.user); 
+            localStorage.setItem('usuario', data.nombreCompleto); 
 
             message.textContent = "Acceso permitido, redirigiendo...";
             message.style.color = "green";
