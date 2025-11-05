@@ -13,10 +13,6 @@ export function recibirMensaje(req, res) {
   console.log('Asunto:', asunto);
   console.log('Mensaje:', mensaje);
 
-  // Aquí podrías:
-  // ✅ Guardarlo en una base de datos
-  // ✅ Enviar un correo con nodemailer
-  // ✅ Guardarlo en un archivo
 
   res.status(200).json({ mensaje: 'Mensaje enviado correctamente' });
 }
