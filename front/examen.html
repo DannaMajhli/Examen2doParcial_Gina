@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen - Certificaciones</title>
     <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .pregunta { margin-bottom: 20px; }
+        .opcion { display: block; margin: 5px 0; }
+    </style>
 </head>
 <body>
 
-  <!-- Header -->
+    <!-- Header -->
     <header id="main-header">
         <div class="logo">SkillForge</div>
         <nav class="menu">
-             <ul>
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="certificaciones.html" class="protegido">Certificaciones</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-             </ul>
+            </ul>
         </nav>
     </header>
 
- <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .pregunta { margin-bottom: 20px; }
-    .opcion { display: block; margin: 5px 0; }
-  </style>
-</head>
-<body>
-  <h1>Examen de JavaScript</h1>
-  <div id="contenedor-preguntas"></div>
-
-  <script src="examen.js"></script>
+    <h1>Examen de JavaScript</h1>
+    <div id="contenedor-preguntas"></div>
   
   <!-- FOOTER  -->
   <footer class="footer">
@@ -42,7 +39,8 @@
 </footer>
 
   <!-- SCRIPTS -->
-  <script src="js/main.js"></script>
+    <script src="examen.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
