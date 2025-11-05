@@ -1,19 +1,19 @@
-const { validateToken } = require('../utils/tokenManager');
+import { validateToken } from '../utils/tokenManager.js';
 
-function authRequired(req, res, next) {
-  const token = req.headers.authorization;
+export function authRequired(req, res, next) {
+  const authHeader = req.headers.authorization;
 
-  if (!token) {
-    return res.status(401).json({ error: 'Token inválido o expirado.' });
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ error: 'Token requerido' });
   }
 
+  const token = authHeader.split(' ')[1];
   const userData = validateToken(token);
+  
   if (!userData) {
-    return res.status(401).json({ error: 'Token inválido o expirado.' });
+    return res.status(401).json({ error: 'Token inválido o expirado' });
   }
 
   req.user = userData;
   next();
 }
-
-module.exports = { authRequired };

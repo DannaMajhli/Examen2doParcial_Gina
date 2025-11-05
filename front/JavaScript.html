@@ -93,23 +93,43 @@
 
 <script>
   // Función que simula el proceso de pago
-  function simularPago() {
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnPagar = document.querySelector('.boton-primario');
+    const btnExamen = document.querySelector('.boton-secundario');
     
-    // Verificamos si ya existe un registro en localStorage que indique que el usuario ya pagó
-    if (localStorage.getItem("pagoRealizado") === "true") {
-      
-      // Si el usuario ya pagó, mostramos una alerta y no permitimos pagar de nuevo
-      alert("⚠️ Ya has realizado el pago. No puedes pagar dos veces.");
+    // Verificar estado al cargar la página
+    const token = localStorage.getItem('token');
+    const pagoRealizado = localStorage.getItem('pagoRealizado');
     
-    } else {
-      
-      // Si el usuario no ha pagado, mostramo mensaje de éxito
-      alert("✅ Pago realizado con éxito. ¡Gracias por tu inscripción!");
-      
-      // Guardamos el estado de pago en localStorage para que se recuerde incluso si se recarga la página
-      localStorage.setItem("pagoRealizado", "true");
+    if (!token) {
+        btnPagar.style.opacity = "0.5";
+        btnExamen.style.opacity = "0.5";
+        btnExamen.onclick = () => alert('Debes iniciar sesión primero');
+        return;
     }
-  }
+    
+    // Lógica de pago
+    btnPagar.onclick = function(e) {
+        e.preventDefault();
+        if (pagoRealizado === 'true') {
+            alert('⚠️ Ya realizaste el pago.');
+        } else {
+            localStorage.setItem('pagoRealizado', 'true');
+            alert('✅ Pago realizado. Ahora puedes hacer el examen.');
+            btnExamen.style.opacity = "1";
+        }
+    };
+    
+    // Lógica de examen
+    btnExamen.onclick = function(e) {
+        e.preventDefault();
+        if (pagoRealizado !== 'true') {
+            alert('⚠️ Debes pagar primero.');
+        } else {
+            window.location.href = 'examen.html';
+        }
+    };
+  });
 </script>
 
 
@@ -118,7 +138,7 @@
 </body>
 
 <footer class="footer">
-    <a href="https://www.instagram.com/ski_llforge/" target="_blank" class="social-icon">
+    <a href="https://www.instagram.com/tu_instagram_aqui" target="_blank" class="social-icon">
         <img src="img/instagram.png" alt="Instagram">
     </a>
     <p>© 2025 SkillForge | Desarrollado por SkillForge</p>

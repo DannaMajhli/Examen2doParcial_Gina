@@ -1,8 +1,7 @@
-const users = require('../data/users');
-const { generateToken } = require('../utils/tokenManager');
+import users from '../data/users.js';
+import { generateToken } from '../utils/tokenManager.js';
 
-// --- LOGIN ---
-function login(req, res) {
+export function login(req, res) {
   const { user, password } = req.body || {};
 
   if (!user || !password) {
@@ -11,8 +10,7 @@ function login(req, res) {
       ejemplo: { user: "Gina", password: "gina123" }
     });
   }
-  
-  console.log("Usuarios disponibles al iniciar login:", users);
+
   console.log("Datos recibidos del cliente:", req.body);
 
   const match = users.find(u => u.name === user && u.password === password);
@@ -25,12 +23,12 @@ function login(req, res) {
 
   res.status(200).json({
     mensaje: `Bienvenido, ${match.name}`,
-    token
+    token,
+    user: { id: match.id, name: match.name }
   });
 }
 
-// --- REGISTER ---
-function register(req, res) {
+export function register(req, res) {
   const { user, email, password } = req.body || {};
 
   if (!user || !password) {
@@ -43,7 +41,7 @@ function register(req, res) {
 
   const newUser = {
     id: users.length + 1,
-    name: user,       
+    name: user,
     email: email || '',
     password
   };
@@ -55,8 +53,6 @@ function register(req, res) {
   res.status(201).json({
     mensaje: `Usuario ${user} registrado correctamente.`,
     token,
-    usuario: { id: newUser.id, name: newUser.name }
+    user: { id: newUser.id, name: newUser.name }
   });
 }
-
-module.exports = { login, register };

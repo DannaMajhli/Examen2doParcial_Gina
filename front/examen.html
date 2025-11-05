@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen - Certificaciones</title>
     <link rel="stylesheet" href="css/estilos.css">
-
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .pregunta { margin-bottom: 20px; }
-        .opcion { display: block; margin: 5px 0; }
-    </style>
+    <link rel="stylesheet" href="css/examen.css">
 </head>
 <body>
 
     <!-- Header -->
     <header id="main-header">
-        <div class="logo">SkillForge</div>
+        <img src="img/skill.png" alt="SkillForge Logo" width="150px" height="auto" />
         <nav class="menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -27,22 +22,49 @@
         </nav>
     </header>
 
-    <h1>Examen de JavaScript</h1>
-    <div id="contenedor-preguntas"></div>
-  <div id="preguntas"></div>
-  <!-- FOOTER  -->
-  <footer class="footer">
-    <a href="https://www.instagram.com/ski_llforge/" target="_blank" class="social-icon">
-        <img src="img/instagram.png" alt="Instagram">
-    </a>
-    <p>© 2025 SkillForge | Desarrollado por SkillForge</p>
-</footer>
+    <main>
+        <div class="examen-container">
+            <h1>Examen de Certificación JavaScript</h1>
+            
+            <div class="info-examen">
+                <p><strong>Usuario:</strong> <span id="nombre-usuario"></span></p>
+                <p><strong>Fecha:</strong> <span id="fecha-actual"></span></p>
+                <p><strong>Certificación:</strong> JavaScript Developer</p>
+                <p><strong>Instrucciones:</strong> Responde las 8 preguntas seleccionando una opción por cada una. Tienes 2 horas para completar el examen.</p>
+            </div>
 
-  <!-- SCRIPTS -->
+            <div class="progreso-examen">
+                <div class="barra-progreso">
+                    <div class="progreso-llenado" id="barra-progreso"></div>
+                </div>
+                <p>Progreso: <span id="contador-preguntas">0</span>/8 preguntas respondidas</p>
+            </div>
+
+            <form id="form-examen">
+                <div id="contenedor-preguntas"></div>
+                
+                <div class="acciones-examen">
+                    <button type="button" id="btn-anterior" class="btn-secundario">Anterior</button>
+                    <button type="button" id="btn-siguiente" class="btn-principal">Siguiente</button>
+                    <button type="submit" id="btn-enviar" class="btn-enviar">Enviar Examen</button>
+                </div>
+            </form>
+
+            <div class="tiempo-restante">
+                <h3>Tiempo restante:</h3>
+                <div id="temporizador" class="temporizador">02:00:00</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.instagram.com/tu_instagram_aqui" target="_blank" class="social-icon">
+            <img src="img/instagram.png" alt="Instagram">
+        </a>
+        <p>© 2025 SkillForge | Desarrollado por SkillForge</p>
+    </footer>
+
     <script src="js/examen.js"></script>
-    <script src="js/main.js"></script>
-
 </body>
 </html>
-
-

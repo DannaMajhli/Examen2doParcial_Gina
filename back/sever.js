@@ -1,8 +1,14 @@
+//Si ocurre un problema, eliminar los primeros 5 cors
 const express = require('express');
 const cors = require('cors');
 const loginRoutes = require('./routes/loginRoutes');
 const examRoutes = require('./routes/exam.Routes');
 const contactRoutes = require('./routes/contactRoutes');
+import express from 'express';
+import cors from 'cors';
+import loginRoutes from './routes/loginRoutes.js';
+import examRoutes from './routes/examRoutes.js';
+import certRoutes from './routes/certRoutes.js';
 
 const app = express();
 
@@ -19,6 +25,7 @@ app.use(express.json());
 app.use('/api', loginRoutes);
 app.use('/api', examRoutes);
 app.use('/api', contactRoutes);
+app.use('/api', certRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

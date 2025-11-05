@@ -1,29 +1,17 @@
-// utils/tokenManager.js
-import crypto from 'crypto';
+import { randomUUID } from 'crypto';
 
-// Objeto temporal para almacenar tokens activos
-const activeTokens = {};
+const sessions = new Map();
 
-// Generar un nuevo token único
-export function generateToken(user) {
-  const token = crypto.randomUUID();
-  activeTokens[token] = {
+export const generateToken = (user) => {
+  const token = randomUUID();
+  sessions.set(token, { 
+    id: user.id, 
     name: user.name,
-    created: Date.now()
-  };
-  console.log(`Aqui está el token: ${token}`);
+    nombreCompleto: user.name
+  });
   return token;
-}
+};
 
-// Verificar si un token es válido
-export function validateToken(token) {
-  return activeTokens[token] || null;
-}
-
-// Eliminar un token (opcional, por si haces logout)
-export function revokeToken(token) {
-  delete activeTokens[token];
-}
-
-// (opcional) exportar el objeto activo, si quieres monitorearlo
-export { activeTokens };
+export const validateToken = (token) => {
+  return sessions.get(token);
+};
