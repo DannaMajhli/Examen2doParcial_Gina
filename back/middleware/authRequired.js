@@ -1,6 +1,6 @@
-import { validateToken } from '../utils/tokenManager.js';
+const { validateToken } = require('../utils/tokenManager');
 
-export function authRequired(req, res, next) {
+function authRequired(req, res, next) {
   const token = req.headers.authorization;
 
   if (!token) {
@@ -15,3 +15,5 @@ export function authRequired(req, res, next) {
   req.user = userData;
   next();
 }
+
+module.exports = { authRequired };

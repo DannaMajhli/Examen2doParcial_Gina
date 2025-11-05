@@ -1,12 +1,15 @@
-import express from 'express';
-import { authRequired } from '../middleware/authRequired.js';
-import { startQuiz, submitAnswers, estadoIntento } from '../controllers/exam.Controller.js';
+const express = require('express');
+const { authRequired } = require('../middleware/authRequired');
+const {
+  startQuiz,
+  submitAnswers,
+  estadoIntento
+} = require('../controllers/exam.Controller');
 
 const router = express.Router();
 
-// Rutas del examen
 router.get('/exam/start', authRequired, startQuiz);
 router.post('/exam/submit', authRequired, submitAnswers);
 router.get('/exam/estado/:idIntento', authRequired, estadoIntento);
 
-export default router;
+module.exports = router;

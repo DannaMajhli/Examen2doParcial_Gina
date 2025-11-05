@@ -1,4 +1,4 @@
-export default [
+module.export = [
   { id: 1, name: 'Admin', email: 'admin@example.com', password: '123456' },
   { id: 2, name: 'Danna', email: '', password: 'danna123' },
   { id: 3, name: 'Aaliyah', email: '', password: 'aaliyah123' },

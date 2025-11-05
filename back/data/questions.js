@@ -1,4 +1,3 @@
-const { title } = require("process");
 
 module.exports = [
     
