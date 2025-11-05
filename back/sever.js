@@ -13,6 +13,11 @@ app.use(express.json());
 app.use('/api', loginRoutes);
 app.use('/api', examRoutes);
 
+import contactRoutes from './routes/contactRoutes.js';
+
+app.use('/api', contactRoutes);
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
