@@ -1,9 +1,14 @@
-// preguntas.js
 document.addEventListener("DOMContentLoaded", async () => {
+  const token = localStorage.getItem("token"); // Recupera el JWT guardado
+  const contenedor = document.getElementById("contenedor-preguntas");
+
   try {
     const response = await fetch("http://localhost:3000/api/exam/start?idQuiz=1", {
       method: "GET",
-      credentials: "include" // si usas cookies para autenticación
+      headers: {
+        "Authorization": `Bearer ${token}`, // ✅ Enviamos token
+        "Content-Type": "application/json"
+      }
     });
 
     const data = await response.json();
@@ -12,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       throw new Error(data.message || "Error al cargar preguntas");
     }
 
-    const contenedor = document.getElementById("contenedor-preguntas");
+    contenedor.innerHTML = "";
 
     data.questions.forEach((pregunta, index) => {
       const div = document.createElement("div");
@@ -40,5 +45,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   } catch (error) {
     console.error("Error al cargar el examen:", error);
+    contenedor.innerHTML = `<p style="color:red;">${error.message}</p>`;
   }
 });
