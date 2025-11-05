@@ -43,7 +43,7 @@ export function register(req, res) {
 
   const newUser = {
     id: users.length + 1,
-    name: user,       // <-- importante: usa 'name' para mantener consistencia
+    name: user,       
     email: email || '',
     password
   };
