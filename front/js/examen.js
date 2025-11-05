@@ -1,21 +1,19 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const token = localStorage.getItem("token"); // Recupera el JWT guardado
+  const token = localStorage.getItem("token");
   const contenedor = document.getElementById("contenedor-preguntas");
 
   try {
     const response = await fetch("http://localhost:3000/api/exam/start?idQuiz=1", {
       method: "GET",
       headers: {
-        "Authorization": `Bearer ${token}`, // ✅ Enviamos token
+        "Authorization": `Bearer ${token}`,
         "Content-Type": "application/json"
       }
     });
 
     const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error(data.message || "Error al cargar preguntas");
-    }
+    if (!response.ok) throw new Error(data.message || "Error al cargar preguntas");
 
     contenedor.innerHTML = "";
 
@@ -23,24 +21,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       const div = document.createElement("div");
       div.className = "pregunta";
 
-      const titulo = document.createElement("h3");
-      titulo.textContent = `${index + 1}. ${pregunta.text}`;
-      div.appendChild(titulo);
-
-      pregunta.options.forEach((opcion, i) => {
-        const label = document.createElement("label");
-        label.className = "opcion";
-
-        const input = document.createElement("input");
-        input.type = "radio";
-        input.name = `pregunta-${pregunta.id}`;
-        input.value = i;
-
-        label.appendChild(input);
-        label.appendChild(document.createTextNode(opcion));
-        div.appendChild(label);
-      });
-
+      div.innerHTML = `
+        <h3>${index + 1}. ${pregunta.text}</h3>
+        ${pregunta.options.map((opt, i) => `
+          <label class="opcion">
+            <input type="radio" name="pregunta-${pregunta.id}" value="${i}">
+            ${opt}
+          </label>
+        `).join("")}
+      `;
       contenedor.appendChild(div);
     });
   } catch (error) {
