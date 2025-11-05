@@ -11,7 +11,7 @@ function login(req, res) {
       ejemplo: { user: "Gina", password: "gina123" }
     });
   }
-
+  
   console.log("Usuarios disponibles al iniciar login:", users);
   console.log("Datos recibidos del cliente:", req.body);
 
@@ -43,7 +43,7 @@ function register(req, res) {
 
   const newUser = {
     id: users.length + 1,
-    name: user,
+    name: user,       
     email: email || '',
     password
   };

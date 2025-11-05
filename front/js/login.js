@@ -17,11 +17,13 @@ loginForm.addEventListener('submit', async (e) => {
         });
 
         const data = await response.json();
+        console.log("Respuesta del backend:", data);
+
 
         if (response.ok) {
             //Guardar sesion
             localStorage.setItem('token', data.token);
-            localStorage.setItem('usuario', data.nombreCompleto); 
+            localStorage.setItem('usuario', data.user); 
 
             message.textContent = "Acceso permitido, redirigiendo...";
             message.style.color = "green";

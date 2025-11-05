@@ -18,20 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (oldLogout) oldLogout.remove();
         if (oldLogin) oldLogin.remove();
 
+        
         if (usuario && token) {
-            // Usuario logueado
-            navList.innerHTML += `
-                <li class="user-info">Hola, ${usuario}</li>
-                <li><a href="#" id="logoutBtn">Cerrar sesión</a></li>
-            `;
-        } else {
-            // Usuario NO logueado
-            navList.innerHTML += `
-                <li><a href="login.html" id="loginBtn">Iniciar Sesión</a></li>
-            `;
-        }
+    navList.innerHTML += `
+        <li><a href="#" id="logoutBtn">Cerrar sesión</a></li>
+    `;
+} else {
+    navList.innerHTML += `
+        <li><a href="login.html" id="loginBtn">Iniciar Sesión</a></li>
+    `;
+}
 
-        // Lógica para cerrar sesión
+
+        // Logica para cerrar sesión
         const logoutBtn = document.getElementById('logoutBtn');
         if (logoutBtn) {
             logoutBtn.addEventListener('click', (e) => {
