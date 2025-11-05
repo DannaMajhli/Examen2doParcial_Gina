@@ -1,18 +1,12 @@
 import express from 'express';
 import { authRequired } from '../middleware/authRequired.js';
+import { startQuiz, submitAnswers, estadoIntento } from '../controllers/examController.js';
 
 const router = express.Router();
 
-router.get('/exam/start', authRequired, (req, res) => {
-  res.json({ message: 'Examen iniciado', user: req.user });
-});
-
-router.post('/exam/submit', authRequired, (req, res) => {
-  res.json({ message: 'Examen enviado', data: req.body });
-});
-
-router.get('/exam/pdf', authRequired, (req, res) => {
-  res.json({ message: 'Aquí se generaría el PDF del examen' });
-});
+// Rutas del examen
+router.get('/exam/start', authRequired, startQuiz);
+router.post('/exam/submit', authRequired, submitAnswers);
+router.get('/exam/estado/:idIntento', authRequired, estadoIntento);
 
 export default router;
