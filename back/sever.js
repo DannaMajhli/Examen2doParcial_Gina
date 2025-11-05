@@ -1,7 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import loginRoutes from './routes/loginRoutes.js';
-import examRoutes from './routes/exam.Routes.js';
+const express = require('express');
+const cors = require('cors');
+const loginRoutes = require('./routes/loginRoutes');
+const examRoutes = require('./routes/exam.Routes');
+const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
 
@@ -9,14 +10,9 @@ app.use(cors());
 app.use(express.json());
 
 // Rutas
-//const loginRoutes = require('./routes/loginRoutes.js');
 app.use('/api', loginRoutes);
 app.use('/api', examRoutes);
-
-import contactRoutes from './routes/contactRoutes.js';
-
 app.use('/api', contactRoutes);
-
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

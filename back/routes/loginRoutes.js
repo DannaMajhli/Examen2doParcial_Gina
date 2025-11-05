@@ -1,6 +1,6 @@
-import express from 'express';
-import { login, register } from '../controllers/loginController.js';
-import { authRequired } from '../middleware/authRequired.js';
+const express = require('express');
+const { login, register } = require('../controllers/loginController');
+const { authRequired } = require('../middleware/authRequired');
 
 const router = express.Router();
 
@@ -16,4 +16,4 @@ router.get('/profile', authRequired, (req, res) => {
   });
 });
 
-export default router;
+module.exports = router;
