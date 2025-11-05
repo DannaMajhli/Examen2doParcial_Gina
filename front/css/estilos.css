@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Marcellus&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Purple+Purse&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Story+Script&family=TASA+Explorer:wght@400..800&display=swap');
 
-/************* Reset **************/
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +28,6 @@ body {
 }
 
 /******* Pagina Principal ********/
-
 .hero {
     padding: 100px 20px;
     color: white;
@@ -45,7 +43,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Botón principal */
+/* Boton principal */
 .btn-principal {
     display: inline-block;
     margin-top: 20px;
@@ -249,7 +247,7 @@ header nav ul li a:hover {
 
 /*cada certificadu*/
 
-/* Fondo semitransparente */
+
 #popup-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -384,7 +382,7 @@ header nav ul li a:hover {
 }
 
 .ventaja {
-  background-color: #ffffff; /* fondo negro elegante */
+  background-color: #ffffff; 
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(185, 236, 255, 0.988);
   padding: 24px;
@@ -496,11 +494,11 @@ footer {
 }
 
 .footer .social-icon img {
-    width: 22px; /* Más pequeño */
+    width: 22px; 
     height: 22px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    filter: brightness(0) invert(1); /* Para que se vea blanco si es negro */
+    filter: brightness(0) invert(1); 
 }
 
 .footer .social-icon img:hover {
@@ -664,7 +662,7 @@ footer {
     color: #3d3d3d;
 }
 
-/*************** Sección Instructores ***************/
+/*************** Seccion Instructores ***************/
 .instructores {
     text-align: center;
     margin-top: 50px;
