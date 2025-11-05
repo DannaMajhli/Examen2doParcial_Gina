@@ -1,8 +1,8 @@
-import users from '../data/users.js';
-import { generateToken } from '../utils/tokenManager.js';
+const users = require('../data/users');
+const { generateToken } = require('../utils/tokenManager');
 
 // --- LOGIN ---
-export function login(req, res) {
+function login(req, res) {
   const { user, password } = req.body || {};
 
   if (!user || !password) {
@@ -11,7 +11,7 @@ export function login(req, res) {
       ejemplo: { user: "Gina", password: "gina123" }
     });
   }
-
+  
   console.log("Usuarios disponibles al iniciar login:", users);
   console.log("Datos recibidos del cliente:", req.body);
 
@@ -30,7 +30,7 @@ export function login(req, res) {
 }
 
 // --- REGISTER ---
-export function register(req, res) {
+function register(req, res) {
   const { user, email, password } = req.body || {};
 
   if (!user || !password) {
@@ -43,7 +43,7 @@ export function register(req, res) {
 
   const newUser = {
     id: users.length + 1,
-    name: user,       // <-- importante: usa 'name' para mantener consistencia
+    name: user,       
     email: email || '',
     password
   };
@@ -58,3 +58,5 @@ export function register(req, res) {
     usuario: { id: newUser.id, name: newUser.name }
   });
 }
+
+module.exports = { login, register };

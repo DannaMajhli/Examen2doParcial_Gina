@@ -1,11 +1,6 @@
-const { title } = require("process");
 
 module.exports = [
-    {
     
-        id:1,
-        title: "CuestionarioJavaScript",
-        questions:[
             {
                 id: 1,
                 text: "Metodo para imprimir en la consola del navegador:",
@@ -87,6 +82,6 @@ module.exports = [
                 options: ["Analizar string y devolver un número entero", "Convertir número a string", "Redondear un número decimal", "Verificar si un valor es un número"],
                 correct: "Analizar string y devolver un número entero"
             }
-        ]
-    },
+    
+
 ];

@@ -17,6 +17,8 @@ loginForm.addEventListener('submit', async (e) => {
         });
 
         const data = await response.json();
+        console.log("Respuesta del backend:", data);
+
 
         if (response.ok) {
             //Guardar sesion
